@@ -1,11 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-
-products {
+.products {
   display: flex;
   flex-wrap: wrap;
 }
@@ -20,4 +13,17 @@ products {
 }
 .product-info {
   padding: 1rem;
+}
+.rating span {
+  color: #ffc000;
+}
+.site-content {
+  min-height: 100vh;
+}
+.main {
+  flex: 1;
+}
+.btn-primary {
+  background-color: #f0c040;
+  color: #000000;
 }
