@@ -1,6 +1,6 @@
-import { Button } from 'bootstrap';
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 // import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
@@ -18,7 +18,7 @@ export default function Product(props) {
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
         <Card.Text>${product.price}</Card.Text>
-        <button className="btn-primary p-2 rounded-2">Add to cart</button>
+        <Button className="btn-primary p-2 rounded-2">Add to cart</Button>
       </Card.Body>
     </Card>
   );
