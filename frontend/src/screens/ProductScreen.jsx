@@ -94,7 +94,6 @@ export default function ProductScreen() {
                   <Row>
                     <Col>Status</Col>
                     <Col>
-                      $
                       {product.countInStock > 0 ? (
                         <Badge bg="success">In Stock</Badge>
                       ) : (
