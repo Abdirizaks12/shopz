@@ -9,6 +9,8 @@ import Rating from '../components/Rating';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -49,9 +51,9 @@ export default function ProductScreen() {
   }, [slug]);
 
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
       <Row>
