@@ -61,7 +61,7 @@ export default function ProductScreen() {
       `http://localhost:5000/api/products/${product._id}`
     );
     if (data.countInStock < quantity) {
-      window.alert('sorry. produvt is out of stock');
+      window.alert('sorry. product is out of stock');
       return;
     }
     ctxDispatch({
