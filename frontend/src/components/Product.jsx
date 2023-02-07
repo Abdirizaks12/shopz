@@ -40,12 +40,18 @@ export default function Product(props) {
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
         <Card.Text>${product.price}</Card.Text>
-        <Button
-          className="btn-primary p-2 rounded-2"
-          onClick={() => addCartHandler(product)}
-        >
-          Add to cart
-        </Button>
+        {product.countInStock === 0 ? (
+          <Button variant="light" disabled>
+            Out Of Stock
+          </Button>
+        ) : (
+          <Button
+            className="btn-primary p-2 rounded-2"
+            onClick={() => addCartHandler(product)}
+          >
+            Add to cart
+          </Button>
+        )}
       </Card.Body>
     </Card>
   );
