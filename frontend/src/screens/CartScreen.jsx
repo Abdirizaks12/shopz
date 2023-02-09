@@ -11,6 +11,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../App.css';
 
+<style>
+  .
+</style>
+
 export default function CartScreen() {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -35,8 +39,9 @@ export default function CartScreen() {
     ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: item });
   };
   const checkOutHandler = () => {
-    navigate('signin?redirect=/shipping');
+    navigate('/signin?redirect=/shipping');
   };
+
   return (
     <div>
       <Helmet>
